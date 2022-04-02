@@ -8,7 +8,7 @@
 
 :root {
     --color-white: #f3f3f3;
-    --color-red: rgba(82, 33, 33, 0.467);
+    --color-red: rgba(84, 71, 71, 0.467);
     --color-accent: #EB0D09;
     font-size: 10px;
   }
@@ -79,21 +79,27 @@ body::before {
   margin-bottom: 0.5rem;
 }
 
-  .description {
-      font-weight: 500;
-      font-style: italic;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-      font-size: 1.5rem;
-  }
+.description {
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  font-size: 1.6rem;
+  text-align: center;
+}
 
-  .text-center {
+.clue {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--color-accent);
+}
+.text-center {
       text-align: center;
   }
 
-  label {
+  label, div > p {
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
   }
 
@@ -103,32 +109,28 @@ select,
 textarea {
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1.5rem;
   line-height: inherit;
 }
 
 button {
     border: none;
+    font-size: 2.5rem;
   }
 
   form {
     background: var(--color-red);
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     border-radius: 0.5rem;
     border: 2px solid var(--color-accent);
   }
   
   @media (min-width: 480px) {
     form {
-      padding: 0rem;
+      padding: 1rem;
     }
   }
 
-  .clue {
-    margin-left: 0.25rem;
-    font-size: 1rem;
-    color: var(--color-accent);
-  }
 
   .form-group {
     margin: 0 auto 0 auto;
@@ -147,7 +149,7 @@ button {
     transition: all ease-in-out 0.2s;
   }
   
-  .form-control:focus {
+  .form-control:focus, .input-textarea:focus {
     border-color: var(--color-accent);
     outline: none;
     box-shadow: 0 0 0 2px var(--color-accent);
@@ -161,18 +163,23 @@ button {
     min-width: 1.25rem;
   }
   
+  .input-radio:focus,
+  .input-checkbox:checked {
+    color: var(--color-accent);
+  }
+
   .input-textarea {
     min-height: 120px;
     width: 100%;
     padding: 0.625rem;
-    resize: vertical;
+    resize: none;
   }
   
   .submit-button {
     display: block;
     width: 100%;
     padding: 0.75rem;
-    background: var(--color-green);
+    background: var(--color-accent);
     color: inherit;
     border-radius: 2px;
     cursor: pointer;
