@@ -89,7 +89,8 @@ body::before {
 
 .clue {
   margin-left: 0.5rem;
-  font-size: 1.25rem;
+  margin-top: 0.3rem;
+  font-size: 1.4rem;
   color: var(--color-accent);
 }
 .text-center {
